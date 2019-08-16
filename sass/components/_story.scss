@@ -8,31 +8,31 @@
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
-    position: relative;
-    
+
     &__shape {
+        position: relative;
         width: 15rem;
         height: 15rem;
         float: left;
-        
+
         /* Does what: Makes the text in a certain shape */
         shape-outside: circle(50% at 50% 50%); //Only works in a floated element.
         -webkit-shape-outside: circle(50% at 50% 50%); //To make it works in Safari.
         clip-path: circle(50% at 50% 50%); //Makes the element (an image in this case) match the shape of the text.
         transform: translateX(-3rem) skewX(12deg);
     }
-    
+
     &__img {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all .5s;
     }
-    
+
     &__text {
         transform: skewX(12deg);
     }
-    
+
     &__caption {
         position: absolute;
         top: 50%;
@@ -46,12 +46,12 @@
         transition: all .5s;
         backface-visibility: hidden;
     }
-    
+
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
-    
+
     &:hover &__img {
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);

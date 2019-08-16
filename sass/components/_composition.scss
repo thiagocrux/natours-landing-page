@@ -14,17 +14,17 @@
             left: 0;
             top: -2rem;
         }
-        
+
         &--p2 {
             right: 0;
             top: 2rem;
         }
-        
+
         &--p3 {
             left: 20%;
             top: 10rem;
         }
-        
+
         &:hover {
             outline: 1.5rem solid $color-primary;
             transform: scale(1.05) translateY(-.5rem);
@@ -33,7 +33,7 @@
         }
 
     }
-    
+
     //Diminui o tamanho das imagens que não estão sobrepostas pelo ponteiro do mouse.
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
