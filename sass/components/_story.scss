@@ -9,11 +9,25 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0)
+    }
+    
     &__shape {
         position: relative;
         width: 15rem;
         height: 15rem;
         float: left;
+        
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
 
         /* Does what: Makes the text in a certain shape */
         shape-outside: circle(50% at 50% 50%); //Only works in a floated element.
@@ -31,6 +45,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
